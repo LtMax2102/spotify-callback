@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <meta charset="UTF-8" />
+        <title>Spotify Auth Callback</title>
+    </head>
+
+    <body>
+        <h1>Spotify Authorization Code</h1>
+        <p>Copy the code below and paste into code window</p>
+        <pre id="code">Loading...</pre>
+    </body>
+
+
+    <script>
+        const code = new URLSearchParams(window.location.search).get("code");
+        document.getElementById("code").innerText = code || "No code found";
+    </script>>
+
+</html>
