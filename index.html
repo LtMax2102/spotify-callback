@@ -5,18 +5,37 @@
     <head>
         <meta charset="UTF-8" />
         <title>Spotify Auth Callback</title>
+        <link rel="stylesheet" href="styles.css">
     </head>
 
     <body>
-        <h1>Spotify Authorization Code</h1>
-        <p>Copy the code below and paste into code window</p>
-        <pre id="code">Loading...</pre>
+        <div>
+            <h1>Spotify Authorization Code</h1>
+            <p>Copy the code below and paste into window <u>(You can click the code to copy)</u></p>
+            <section>
+                <p id="code">AQBAs9cU8a-kg_Wrgku8ZPZXjRlecX9epYRu51CyzotChKIFZfxxpKFOuzb0r9_eLMazDxoVIgn-V_YbhEX8gEjCN_KJvC3AhZRmqj5nWMbesIx_WaCngV9F6V35QPKKAkTd7x_JtZN3VKY1WRAXpIL3je1BgWNKP0EJP9JetzO4ajkpGCZsbaIFuKGEaTi_cWE-T_i2drNCo6kEOwqLt_76RLz_QtBGAmHc90Rdpf2e7lDBQtK-MNURAAY</p>
+                <img src="./copy.svg">
+            </section>
+
+        </div>
     </body>
 
 
     <script>
         const code = new URLSearchParams(window.location.search).get("code");
         document.getElementById("code").innerText = code || "No code found";
-    </script>>
 
+        document.querySelector("img").onclick = () => {
+            console.log(code)
+            console.log(document.getElementById("code").innerText)
+            navigator.clipboard.writeText(code)
+        }
+
+        document.getElementById("code").onclick = () => {
+            console.log(code)
+            console.log(document.getElementById("code").innerText)
+            navigator.clipboard.writeText(code)
+        }
+
+    </script>
 </html>

@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Verdana;
+    background: teal;
+}
+
+div {
+    word-wrap: break-word;
+    background: indianred;
+    color: lemonchiffon;
+    text-align: center;
+    padding: 15px;
+    margin: 15px;
+    border-radius: 25px;
+}
+
+div p {
+    margin: 15px;
+
+}
+
+section {
+    border: 2px solid white;
+    margin-bottom: 10px;
+}
+
+section p {
+    font-family: Courier New;
+    font-size: 14px;
+    color: white;
+    padding: 15px;
+    margin: 0;
+    cursor: pointer;
+    user-select: none;
+}
+
+section img {
+    position: static;
+    float: right;
+    margin-right: 0px;
+    margin-top: -28px;
+}
+
+section img:hover {
+    cursor: pointer;
+    color: black;
+}
